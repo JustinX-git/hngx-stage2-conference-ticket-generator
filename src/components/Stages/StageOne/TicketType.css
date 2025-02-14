@@ -92,6 +92,15 @@
 
 @media (max-width:540px) {
     #radio-1 {
-        align-self: flex-start;
+        width: 90%;
+    }
+
+
+    #radio-2 {
+        width: 90%;
+    }
+
+    #radio-3 {
+        width: 90%;
     }
 }
