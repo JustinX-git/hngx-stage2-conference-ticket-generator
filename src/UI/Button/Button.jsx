@@ -8,7 +8,7 @@ const Button = ({ value,action,hue, onBtnClick}) => {
   }
   return (
     <>
-      <button tabIndex={0} className={`footer-button${selectedClass}`} onClick={btnClickhandler}>
+      <button aria-label={value} tabIndex={0} className={`footer-button${selectedClass}`} onClick={btnClickhandler}>
         {value}
       </button>
     </>

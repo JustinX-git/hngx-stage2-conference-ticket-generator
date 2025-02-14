@@ -103,7 +103,7 @@ const ImageUploader = (props) => {
   Drag & drop or click to upload
 </p>
 
-  {(imageUrl.length === 0) ?  <p className="error">{error}</p> : <span></span>}
+  {(imageUrl.length === 0) ?  <p role="alert" aria-live="assertive" aria-label={error} className="error">{error}</p> : <span></span>}
         </div>
       </div>
     </div>

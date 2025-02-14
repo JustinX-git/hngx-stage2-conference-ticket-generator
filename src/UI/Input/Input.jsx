@@ -21,6 +21,7 @@ const Input = ({ label, type, name, placeholder, error }) => {
   if (type === "textarea") {
     renderedInput = (
       <textarea
+        aria-label={`Optional. Input a special request`}
         maxLength={50}
         className="atendee-input textarea"
         type={type}
@@ -34,6 +35,7 @@ const Input = ({ label, type, name, placeholder, error }) => {
   } else {
     renderedInput = (
       <input
+        aria-label={`Required. Input your ${name}`}
         className={`atendee-input${error ? " invalid" : ""}${name === "email" ? " email" : ""}`}
         type={type}
         name={name}
@@ -49,7 +51,7 @@ const Input = ({ label, type, name, placeholder, error }) => {
     <>
       <div className="input-wrapper">
         <label className="atendee-input-label">{label}</label>
-        {error && <span className="error">{error}</span>}
+        {error && <span role="alert" aria-live="assertive" aria-label={error} className="error">{error}</span>}
         {renderedInput}
       </div>
     </>

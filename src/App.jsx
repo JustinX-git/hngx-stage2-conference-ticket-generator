@@ -180,12 +180,12 @@ const App = () => {
         </div>
 
         <div className="nav-links">
-          <p className="nav-link">Events</p>
-          <p className="nav-link">My Tickets</p>
-          <p className="nav-link">About Project</p>
+          <p tabIndex={0} className="nav-link">Events</p>
+          <p tabIndex={0} className="nav-link">My Tickets</p>
+          <p tabIndex={0} className="nav-link">About Project</p>
         </div>
 
-        <div className="ticket-btn">
+        <div tabIndex={0} className="ticket-btn">
           <p>MY TICKETS</p>
           <svg
             className="line"
