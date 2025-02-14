@@ -5,7 +5,6 @@ import StageThree from "./components/Stages/StageThree/StageThree";
 import Button from "./UI/Button/Button";
 import "./App.css";
 
-//CLEAR LOCAL STORAGE ON SUBMISSION
 const App = () => {
   // Form Stages
   const formStages = [
@@ -22,18 +21,19 @@ const App = () => {
 
   //States and Hooks
   const [index, setIndex] = useState(0);
-  const [amtSelect, setAmtSelect] = useState(localStorage.getItem("ticket-amt") || "1" );
+  const [amtSelect, setAmtSelect] = useState(
+    localStorage.getItem("ticket-amt") || "1"
+  );
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({});
 
-  useEffect(() =>{
-     if(amtSelect === "0") setAmtSelect("1")
-     else{
-    localStorage.setItem("ticket-amt", amtSelect)
+  useEffect(() => {
+    if (amtSelect === "0") setAmtSelect("1");
+    else {
+      localStorage.setItem("ticket-amt", amtSelect);
     }
-  },[amtSelect])
+  }, [amtSelect]);
 
-  ///\S+@\S+\.\S+/
   //Input validation
   const isValid = () => {
     let newErrors = {};
@@ -42,8 +42,12 @@ const App = () => {
     const avatar = localStorage.getItem("avatar-url") || "";
     if (avatar.length === 0) newErrors.avatar = "Upload an avatar";
     if (name.trim().length === 0) newErrors.name = "Name is required";
-    if (!/^[a-z0-9]+([._-]?[a-z0-9]+)*@[a-z0-9]+([.-]?[a-z0-9]+)*\.[a-z]{2,}$/
-.test(email)) newErrors.email = "Valid email required";
+    if (
+      !/^[a-z0-9]+([._-]?[a-z0-9]+)*@[a-z0-9]+([.-]?[a-z0-9]+)*\.[a-z]{2,}$/.test(
+        email
+      )
+    )
+      newErrors.email = "Valid email required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -76,7 +80,7 @@ const App = () => {
         {
           if (isValid()) {
             setErrors({});
-            
+
             setIndex((prevIndex) => {
               return prevIndex + 1;
             });
@@ -182,9 +186,15 @@ const App = () => {
         </div>
 
         <div className="nav-links">
-          <p tabIndex={0} className="nav-link">Events</p>
-          <p tabIndex={0} className="nav-link">My Tickets</p>
-          <p tabIndex={0} className="nav-link">About Project</p>
+          <p tabIndex={0} className="nav-link">
+            Events
+          </p>
+          <p tabIndex={0} className="nav-link">
+            My Tickets
+          </p>
+          <p tabIndex={0} className="nav-link">
+            About Project
+          </p>
         </div>
 
         <div tabIndex={0} className="ticket-btn">
@@ -226,7 +236,6 @@ const App = () => {
             amtSelect={amtSelect}
             setAmtSelect={setAmtSelect}
             errors={errors}
-            // setErrors={setErrors}
             setFormData={setFormData}
           />
           <div className="buttons">

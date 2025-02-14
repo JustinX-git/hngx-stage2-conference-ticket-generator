@@ -6,14 +6,14 @@
     width: 100%;
 }
 
-@media (max-width: 540px){
-    .progress-container-2{
+@media (max-width: 540px) {
+    .progress-container-2 {
         width: 85%;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .input-wrapper{
+    .input-wrapper {
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -21,18 +21,18 @@
         margin: auto;
     }
 
-    .atendee-input{
+    .atendee-input {
         width: 90%;
         display: block;
         height: 30px;
     }
 
-    .atendee-input[type="email"]{
+    .atendee-input[type="email"] {
         width: calc(90% - 28px);
         display: block;
     }
 
-    .atendee-input-label{
+    .atendee-input-label {
         align-self: flex-start;
     }
 }

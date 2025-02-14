@@ -1,6 +1,7 @@
 .radio {
     cursor: pointer;
-    background: #12464e00;;
+    background: #12464e00;
+    ;
     transition: background-color .4s ease;
 }
 
@@ -89,8 +90,8 @@
     line-height: 150%;
 }
 
-@media (max-width:540px){
-    #radio-1{
+@media (max-width:540px) {
+    #radio-1 {
         align-self: flex-start;
     }
 }

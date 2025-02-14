@@ -1,21 +1,22 @@
-.image-container{
-    box-sizing: border-box; 
+.image-container {
+    box-sizing: border-box;
     max-width: 556px;
     width: 100%;
     padding: 24px;
     display: flex;
     align-self: center;
-padding: 24px 24px 48px 24px;
-flex-direction: column;
-align-items: flex-start;
-gap: 32px;
-border-radius: 24px;
-border: 1px solid #07373F;
-background: #052228;
+    padding: 24px 24px 48px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    border-radius: 24px;
+    border: 1px solid #07373F;
+    background: #052228;
 }
 
 
-.image-container .label, .guide{
+.image-container .label,
+.guide {
     color: var(--tingrader-vercel-app-color-grey-98);
     font-family: var(--text-regular-normal-font-family);
     font-size: var(--text-regular-normal-font-size);
@@ -25,49 +26,49 @@ background: #052228;
     text-align: center;
 }
 
-.guide{
+.guide {
     position: absolute;
     z-index: 10;
     top: 50%;
     left: 50%;
     width: inherit;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .guide.visible {
     opacity: 1;
-  }
+}
 
-  .guide.hidden {
+.guide.hidden {
     opacity: 0;
-  }
-
-.image-backdrop{
-    display: flex;
-height: 200px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-align-self: stretch;
-background: rgba(0, 0, 0, 0.20);
 }
 
-.image-uploader{
+.image-backdrop {
     display: flex;
-width: 240px;
-aspect-ratio: 1/1;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 16px;
-border-radius: 32px;
-border: 4px solid rgba(36, 160, 181, 0.50);
-background: #0E464F;
-cursor:pointer;
-position: relative;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    background: rgba(0, 0, 0, 0.20);
 }
 
-.image-uploader::before{
+.image-uploader {
+    display: flex;
+    width: 240px;
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 32px;
+    border: 4px solid rgba(36, 160, 181, 0.50);
+    background: #0E464F;
+    cursor: pointer;
+    position: relative;
+}
+
+.image-uploader::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -79,89 +80,88 @@ position: relative;
     background-color: transparent;
 }
 
-.image-uploader:hover:before{
+.image-uploader:hover:before {
     background-color: rgba(0, 0, 0, 0.426);
 }
 
 
-.image-container svg{
+.image-container svg {
     z-index: 10;
     width: 32px;
-height: 32px;
-flex-shrink: 0;
-aspect-ratio: 1/1;
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%,-35%);
+    height: 32px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
 }
 
-.image-container svg.visible{
+.image-container svg.visible {
     opacity: 1;
 }
 
-.image-container svg.hidden{
+.image-container svg.hidden {
     opacity: 0;
 }
 
-.image-uploader.uploaded:hover svg{
+.image-uploader.uploaded:hover svg {
     opacity: 1;
 }
 
-.image-uploader.uploaded:hover .guide{
+.image-uploader.uploaded:hover .guide {
     opacity: 1;
 }
 
 
-.loader{
+.loader {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 25%;
     aspect-ratio: 1/1;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.image-uploader .error{
+.image-uploader .error {
     position: absolute;
     top: 70%;
     left: 50%;
     width: inherit;
-    transform: translate(-50%,-70%);
+    transform: translate(-50%, -70%);
 }
 
 /* Media Queries */
-@media(max-width: 800px){
-    .image-container{
+@media(max-width: 800px) {
+    .image-container {
         width: 460px;
         padding: 40px;
-       align-self: center;
-    }
-  }
-
-  @media(max-width:680px){
-    .image-container{
-        width: 90%;
-    }
-  }
-
-@media(max-width:540px){
-    .image-container {
-      padding:0px  40px 30px 40px;
-      margin: 0 10%;
-      gap: 12px;
-    }
-    
-    .image-backdrop{
-      background: transparent;
-    }
-    
-    .image-uploader{
-      width: 170px;
-    }
-
-    .guide{
-        font-size: 14px;
+        align-self: center;
     }
 }
 
+@media(max-width:680px) {
+    .image-container {
+        width: 90%;
+    }
+}
+
+@media(max-width:540px) {
+    .image-container {
+        padding: 0px 40px 30px 40px;
+        margin: 0 10%;
+        gap: 12px;
+    }
+
+    .image-backdrop {
+        background: transparent;
+    }
+
+    .image-uploader {
+        width: 170px;
+    }
+
+    .guide {
+        font-size: 14px;
+    }
+}

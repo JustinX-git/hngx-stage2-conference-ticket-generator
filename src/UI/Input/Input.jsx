@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Input.css";
 
-const Input = ({ label, type, name, placeholder, error}) => {
+const Input = ({ label, type, name, placeholder, error }) => {
   const [inputValue, setInputValue] = useState(() => {
     return localStorage.getItem(name) || "";
   });
@@ -39,12 +39,13 @@ const Input = ({ label, type, name, placeholder, error}) => {
     renderedInput = (
       <input
         aria-label={`Required. Input your ${name}`}
-        className={`atendee-input${error ? " invalid" : ""}${name === "email" ? " email" : ""}`}
+        className={`atendee-input${error ? " invalid" : ""}${
+          name === "email" ? " email" : ""
+        }`}
         type={type}
         name={name}
         value={inputValue}
         placeholder={placeholder}
-        // onBlur={onBlurHandler}
         onChange={onChangeHandler}
         tabIndex={0}
       />
@@ -54,8 +55,19 @@ const Input = ({ label, type, name, placeholder, error}) => {
   return (
     <>
       <div className="input-wrapper">
-        <label className="atendee-input-label" htmlFor={`${type}`}>{label}</label>
-        {(error && errorState) && <span role="alert" aria-live="assertive" aria-label={error} className="error">{error}</span>}
+        <label className="atendee-input-label" htmlFor={`${type}`}>
+          {label}
+        </label>
+        {error && errorState && (
+          <span
+            role="alert"
+            aria-live="assertive"
+            aria-label={error}
+            className="error"
+          >
+            {error}
+          </span>
+        )}
         {renderedInput}
       </div>
     </>

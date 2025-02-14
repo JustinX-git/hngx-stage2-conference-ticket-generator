@@ -10,9 +10,7 @@ const StageTwo = ({errors,setErrors}) =>  (
       label={"Enter your name*"}
       type={"text"}
       name={"name"}
-      // value={formData.name}
       placeholder={""}
-      // setErrors={setErrors}
       error={errors.name}
       />
 
@@ -20,14 +18,11 @@ const StageTwo = ({errors,setErrors}) =>  (
       label={"Enter your email*"}
       type={"email"}
       name={"email"}
-      // value={formData.email}
       placeholder={""}
-      // setErrors={setErrors}
       error={errors.email}
       />
 
       <Input 
-      // value={formData.request}
       label={"Special request"}
       type={"textarea"}
       name={"request"}

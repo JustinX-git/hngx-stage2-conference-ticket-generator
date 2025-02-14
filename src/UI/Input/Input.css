@@ -1,14 +1,8 @@
-.input-wrapper{
-    /* display: flex;
-    row-gap: 1rem;
-    flex-direction: column;
-    justify-content: center; */
-
-    /* align-content: stretch; */
-    width: 96% ;
+.input-wrapper {
+    width: 96%;
 }
 
-.atendee-input-label{
+.atendee-input-label {
     display: block;
     margin-bottom: .9rem;
     color: var(--tingrader-vercel-app-color-grey-98);
@@ -19,7 +13,7 @@
     line-height: 5px;
 }
 
-.atendee-input{
+.atendee-input {
     all: unset;
     display: block;
     width: 100%;
@@ -35,28 +29,27 @@
     font-family: var(--text-regular-normal-font-family);
 }
 
-.atendee-input.email{
+.atendee-input.email {
     background: url('/envelope.png') no-repeat 10px center;
     background-size: 25px;
     padding-left: 40px;
     width: calc(100% - 28px);
 }
 
-.atendee-input.invalid{
+.atendee-input.invalid {
     border: 1px solid rgb(255, 0, 0);
     background-color: rgba(255, 0, 0, 0.061);
 }
 
-.atendee-input:focus{
-    outline: 2px solid #0E464F;;
+.atendee-input:focus {
+    outline: 2px solid #0E464F;
+    ;
 }
 
-.atendee-input.textarea{
+.atendee-input.textarea {
     height: 127px;
 }
 
-.input-wrapper .error{
+.input-wrapper .error {
     font-size: 14px;
 }
-
-
