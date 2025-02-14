@@ -1,0 +1,33 @@
+.footer-button {
+    padding: 1rem 2rem;
+    border: 1px solid #24A0B5;
+    border-radius: 10px;
+    /* all: unset; */
+    font-size: large;
+    font-family: JejuMyeongjo;
+    display: flex;
+    padding: 15px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    color: #24A0B5;
+    border: 1px solid #24A0B5;
+    cursor: pointer;
+    background: transparent;
+    transition: all .4s ease;
+}
+
+.footer-button:hover{
+    scale: 1.03;
+}
+
+.footer-button:active{
+    scale: 0.98;
+}
+
+.footer-button.selected {
+    color: #fff;
+    background-color: #24A0B5;
+}

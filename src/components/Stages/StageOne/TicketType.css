@@ -1,0 +1,96 @@
+.radio {
+    cursor: pointer;
+    background: #12464e00;;
+    transition: background-color .4s ease;
+}
+
+.radio:hover {
+    background: #2C545B;
+}
+
+.radio.selected {
+    background: #12464E;
+    border: 1px solid #197686;
+}
+
+#radio-1 {
+    display: flex;
+    width: 158px;
+    height: 110px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border: 2px solid #197686;
+    border-radius: var(--semantic-radius-reg-2);
+}
+
+
+#radio-2 {
+    display: flex;
+    width: 158px;
+    height: 110px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 12px;
+    border: 2px solid #197686;
+}
+
+#radio-3 {
+    display: flex;
+    width: 158px;
+    height: 110px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 12px;
+    border: 2px solid #197686;
+}
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.text-wrapper {
+    all: unset;
+    font-family: var(--text-regular-normal-font-family);
+    color: #FAFAFA;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+.button-1 {
+    all: unset;
+    font-family: var(--text-regular-normal-font-family);
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.button-2 {
+    all: unset;
+    font-family: var(--text-regular-normal-font-family);
+    color: #D9D9D9;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media (max-width:540px){
+    #radio-1{
+        align-self: flex-start;
+    }
+}

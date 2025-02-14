@@ -1,0 +1,160 @@
+.section-title-2 {
+    display: flex;
+    height: 200px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 24px;
+    border-right: 2px solid #07373F;
+    border-bottom: 2px solid #07373F;
+    border-left: 2px solid #07373F;
+    background: radial-gradient(57.42% 106.59% at 14.02% 32.06%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), rgba(10, 12, 17, 0.10);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.heading-2 {
+    color: var(--tingrader-vercel-app-color-grey-98);
+    text-align: center;
+    font-family: "Road Rage", serif;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.p {
+    color: var(--tingrader-vercel-app-color-grey-98);
+    font-family: var(--text-regular-normal-font-family);
+    font-size: var(--text-regular-normal-font-size);
+    font-style: var(--text-regular-normal-font-style);
+    font-weight: var(--text-regular-normal-font-weight);
+    line-height: var(--text-regular-normal-line-height);
+    text-align: center;
+}
+
+.deets {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.text-2 {
+    color: var(--tingrader-vercel-app-color-grey-98);
+    font-family: var(--text-regular-normal-font-family);
+    font-size: var(--text-regular-normal-font-size);
+    font-style: var(--text-regular-normal-font-style);
+    font-weight: var(--text-regular-normal-font-weight);
+    line-height: var(--text-regular-normal-line-height);
+}
+
+.progress-container-2 {
+    align-self: stretch;
+    background-color: #07363e;
+    height: 4px;
+    position: relative;
+    width: 100%;
+}
+
+.div-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.label {
+    color: var(--tingrader-vercel-app-color-grey-98);
+    font-family: var(--text-regular-normal-font-family);
+    font-size: var(--text-regular-normal-font-size);
+    font-style: var(--text-regular-normal-font-style);
+    font-weight: var(--text-regular-normal-font-weight);
+    line-height: var(--text-regular-normal-line-height);
+}
+
+.input {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid #07373F;
+    background: #052228;
+}
+
+.input .radio-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 24px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 540px){
+    .heading-2{
+        font-size: 37px;
+    }
+
+    .section-title-2 {
+        width: 80%;
+        padding: 14px;
+        align-self: center;
+    }
+
+    .p{
+        font-size: 14px;
+    }
+
+    .text-2 {
+        font-size: 16px;
+    }
+
+    .deets{
+        display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 4px;
+margin-top: 1rem;
+    }
+
+    .deets .text-2:nth-child(2){
+        display:  none;
+    }
+
+    .div-2{
+        width: 80%;
+        align-self: center;
+      }
+    
+
+    /* .input{
+        background:hsla(190, 78%, 9%, 1)
+        ;
+    } */
+
+    .input .radio-button {
+flex-direction: column;
+align-content: center;
+    }
+}
+
+
+
+

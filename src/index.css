@@ -1,0 +1,30 @@
+@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Road+Rage&display=swap');
+
+:root {  
+  display: flex;
+  padding: 112px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  overflow-x: hidden;
+  background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D;
+  --primitive-color-neutral-black: rgba(0, 0, 0, 1);
+  --primitive-color-neutral-black-duplicate: rgba(0, 0, 0, 1);
+  --primitive-color-neutral-white: rgba(255, 255, 255, 1);
+  --primitive-numbers-12: 12px;
+  --primitive-numbers-24: 24px;
+  --primitive-numbers-8: 8px;
+  --semantic-radius-reg: var(--primitive-numbers-8);
+  --semantic-radius-reg-2: var(--primitive-numbers-12);
+  --semantic-radius-semi: var(--primitive-numbers-24);
+  --semantic-text-alternate: var(--primitive-color-neutral-white);
+  --semantic-text-primary: var(--primitive-color-neutral-black);
+  --text-regular-normal-font-family: "Roboto", Helvetica;
+  --text-regular-normal-font-size: 16px;
+  --text-regular-normal-font-style: normal;
+  --text-regular-normal-font-weight: 400;
+  --text-regular-normal-line-height: 150%;
+  --tingrader-vercel-app-color-grey-98: hsl(0, 0%, 98%);
+  --tingrader-vercel-app-color-white-solid: rgba(255, 255, 255, 1);
+}

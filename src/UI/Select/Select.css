@@ -1,0 +1,86 @@
+.ticket-amt-select{
+    width: 100%;
+    height: 42px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #07373F;
+    transition: all .4s ease-in;
+  }
+
+  .ticket-amt-select.expand{
+    height: 120px;
+    overflow-y: scroll;
+  }
+
+  .fas{
+    transition: transform .4s ease;
+  }
+
+  .fas.rotate{
+    transform: rotate(-180deg);
+  }
+
+  
+  .ticket-amt-select .amt{
+
+    width: 100%;
+  /* padding: 1rem 1.5rem; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* column-gap: .8rem; */
+  padding-inline-start: 0rem;
+  cursor: pointer;
+  transition: all .4s ease;
+  list-style: none;
+  }
+
+  .ticket-amt-select .amt li{
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+      column-gap: .8rem;
+    border-width:  1px 0px 0px 0px;
+    border-color:#07373F;
+    border-style: solid;
+    transition: background .4s ease;
+  }
+
+  .ticket-amt-select .amt li:hover{
+    background: #12464e58
+  }
+
+  .ticket-amt-select::-webkit-scrollbar{
+    width: 20px;
+    background: transparent;
+  }
+
+  .ticket-amt-select::-webkit-scrollbar-thumb{  
+    background: #07373F;
+    border-radius: 50px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+  }
+  
+
+  .ticket-amt-select div{
+    width: 95%;
+    padding: 0 1rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+   transform: translateY(-2px);
+    cursor: pointer;
+  }
+
+  @media(max-width: 540px){
+    .ticket-amt-select div{
+      width: 85%;
+    }
+  }

@@ -1,0 +1,38 @@
+.progress-container-2 {
+    align-self: stretch;
+    background-color: #07363e;
+    height: 4px;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 540px){
+    .progress-container-2{
+        width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .input-wrapper{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: auto;
+    }
+
+    .atendee-input{
+        width: 90%;
+        display: block;
+        height: 30px;
+    }
+
+    .atendee-input[type="email"]{
+        width: calc(90% - 28px);
+        display: block;
+    }
+
+    .atendee-input-label{
+        align-self: flex-start;
+    }
+}
