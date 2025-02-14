@@ -7,7 +7,6 @@ import "./App.css";
 
 //CLEAR LOCAL STORAGE ON SUBMISSION
 const App = () => {
-  console.log(window.matchMedia("(max-width:580)"))
   // Form Stages
   const formStages = [
     (props) => <StageOne {...props} />,
