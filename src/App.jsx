@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import StageOne from "./components/Stages/StageOne/StageOne";
 import StageTwo from "./components/Stages/StageTwo/StageTwo";
 import StageThree from "./components/Stages/StageThree/StageThree";
+import Overlay from "./components/Overlay/Overlay";
 import Button from "./UI/Button/Button";
 import "./App.css";
 
@@ -21,6 +22,7 @@ const App = () => {
 
   //States and Hooks
   const [index, setIndex] = useState(0);
+  const [showNavs, setShowNavs] = useState(false);
   const [amtSelect, setAmtSelect] = useState(
     localStorage.getItem("ticket-amt") || "1"
   );
@@ -49,6 +51,10 @@ const App = () => {
   };
 
   //Handlers
+  const showNavshandler = () => {
+    if (window.matchMedia("(max-width: 680px)").matches) setShowNavs(true);
+  };
+
   const onBtnClickHandler = (action) => {
     switch (action) {
       case "back":
@@ -96,9 +102,10 @@ const App = () => {
   const StageComponent = formStages[index];
   return (
     <>
+      {showNavs && <Overlay setShowNavs={setShowNavs} />}
       <nav className="nav-bar">
         <div className="logos">
-          <div className="thumb">
+          <div className="thumb" tabIndex={0} onClick={showNavshandler}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

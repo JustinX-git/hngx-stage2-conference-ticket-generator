@@ -1,0 +1,54 @@
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    cursor: pointer;
+    animation: fadeIn 0.5s forwards;
+}
+
+.close-btn img {
+    width: 40px;
+    aspect-ratio: 1/1;
+}
+
+.links-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--tingrader-vercel-app-color-grey-98);
+    font-size: 24px;
+    font-family: "JejuMyeongjo";
+    ;
+    backdrop-filter: blur(10px);
+    background-color: #02191dcf;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.links-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    row-gap: 2rem;
+    margin-top: 8rem;
+    padding: 0px;
+}
+
+.links-container .overlay-links .nav-link {
+    cursor: pointer;
+    opacity: 0;
+    padding: 5px 15px;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
