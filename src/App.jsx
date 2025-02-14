@@ -33,6 +33,7 @@ const App = () => {
     }
   },[amtSelect])
 
+  ///\S+@\S+\.\S+/
   //Input validation
   const isValid = () => {
     let newErrors = {};
@@ -41,7 +42,8 @@ const App = () => {
     const avatar = localStorage.getItem("avatar-url") || "";
     if (avatar.length === 0) newErrors.avatar = "Upload an avatar";
     if (name.trim().length === 0) newErrors.name = "Name is required";
-    if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Valid email required";
+    if (!/^[a-z0-9]+([._-]?[a-z0-9]+)*@[a-z0-9]+([.-]?[a-z0-9]+)*\.[a-z]{2,}$/
+.test(email)) newErrors.email = "Valid email required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -224,7 +226,7 @@ const App = () => {
             amtSelect={amtSelect}
             setAmtSelect={setAmtSelect}
             errors={errors}
-            formData={formData}
+            // setErrors={setErrors}
             setFormData={setFormData}
           />
           <div className="buttons">

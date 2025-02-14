@@ -24,7 +24,7 @@ const StageThree = () =>{
 {/* {`${localStorage.getItem("name").length > 11 ? localStorage.getItem("name").slice(0,10) + "..." : localStorage.getItem("name")}`} */}
                         <div className="cell">
                         <span  className="label">Enter your email*</span>
-                        <span  className="value">{`${localStorage.getItem("email").length > 11 ? localStorage.getItem("email").slice(0,10) + "..." : localStorage.getItem("email")}`}</span>
+                        <span  className="value">{`${localStorage.getItem("email").length > 16 ? localStorage.getItem("email").slice(0,15) + "..." : localStorage.getItem("email")}`}</span>
                         </div>
                     </div>
 

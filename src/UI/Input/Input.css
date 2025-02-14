@@ -10,7 +10,7 @@
 
 .atendee-input-label{
     display: block;
-    margin-bottom: .75rem;
+    margin-bottom: .9rem;
     color: var(--tingrader-vercel-app-color-grey-98);
     font-family: var(--text-regular-normal-font-family);
     font-size: var(--text-regular-normal-font-size);

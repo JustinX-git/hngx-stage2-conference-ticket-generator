@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import "./Input.css";
 
-const Input = ({ label, type, name, placeholder, error }) => {
+const Input = ({ label, type, name, placeholder, error}) => {
   const [inputValue, setInputValue] = useState(() => {
     return localStorage.getItem(name) || "";
   });
+  const [errorState, setErrorState] = useState(true);
 
   const onChangeHandler = (e) => {
     const newValue = e.target.value;
-    setInputValue(newValue);
+    e.target.classList.remove("invalid");
     localStorage.setItem(name, newValue);
+    setInputValue(newValue);
+    setErrorState(false);
   };
 
   useEffect(() => {
@@ -41,6 +44,7 @@ const Input = ({ label, type, name, placeholder, error }) => {
         name={name}
         value={inputValue}
         placeholder={placeholder}
+        // onBlur={onBlurHandler}
         onChange={onChangeHandler}
         tabIndex={0}
       />
@@ -50,8 +54,8 @@ const Input = ({ label, type, name, placeholder, error }) => {
   return (
     <>
       <div className="input-wrapper">
-        <label className="atendee-input-label">{label}</label>
-        {error && <span role="alert" aria-live="assertive" aria-label={error} className="error">{error}</span>}
+        <label className="atendee-input-label" htmlFor={`${type}`}>{label}</label>
+        {(error && errorState) && <span role="alert" aria-live="assertive" aria-label={error} className="error">{error}</span>}
         {renderedInput}
       </div>
     </>
