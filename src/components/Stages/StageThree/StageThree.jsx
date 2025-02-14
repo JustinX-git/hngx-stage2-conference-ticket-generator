@@ -71,7 +71,6 @@ const StageThree = () => {
                 <div className="value">
                   {localStorage.getItem("request") || "Nil"}
                 </div>
-                {/* {localStorage.getItem("request")} */}
               </div>
             </div>
           </div>
