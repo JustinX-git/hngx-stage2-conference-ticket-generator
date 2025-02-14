@@ -42,12 +42,7 @@ const App = () => {
     const avatar = localStorage.getItem("avatar-url") || "";
     if (avatar.length === 0) newErrors.avatar = "Upload an avatar";
     if (name.trim().length === 0) newErrors.name = "Name is required";
-    if (
-      !/^[a-z0-9]+([._-]?[a-z0-9]+)*@[a-z0-9]+([.-]?[a-z0-9]+)*\.[a-z]{2,}$/.test(
-        email
-      )
-    )
-      newErrors.email = "Valid email required";
+    if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Valid email required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
